@@ -1,0 +1,74 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Box Animation</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      background: #f0f0f0;
+    }
+
+    .big-box {
+      width: 400px;
+      height: 200px;
+      background: #ddd;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid #d60000;
+    }
+
+    .small-box {
+      width: 80px;
+      height: 80px;
+      background: steelblue;
+      transition: transform 0.5s ease;
+    }
+
+    .big-box.hover .small-box:nth-child(1) {
+      transform: translateX(-150px);
+      transition-delay: 0s;
+    }
+
+    .big-box.hover .small-box:nth-child(2) {
+      transform: translateX(-250px);
+      transition-delay: 0.2s;
+    }
+
+    .big-box.hover .small-box:nth-child(3) {
+      transform: translateX(-450px);
+      transition-delay: 0.4s;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="big-box" id="bigBox">
+    <div class="small-box"></div>
+    <div class="small-box"></div>
+    <div class="small-box"></div>
+  </div>
+
+  <script>
+    const bigBox = document.getElementById('bigBox');
+
+    bigBox.addEventListener('mouseenter', () => {
+      bigBox.classList.add('hover');
+    });
+
+    bigBox.addEventListener('mouseleave', () => {
+      bigBox.classList.remove('hover');
+    });
+  </script>
+
+</body>
+</html>
