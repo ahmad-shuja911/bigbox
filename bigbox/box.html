@@ -34,18 +34,18 @@
       transition: transform 0.5s ease;
     }
 
-    .big-box.hover .small-box:nth-child(1) {
+    .big-box:hover .small-box:nth-child(1) {
       transform: translateX(-150px);
       transition-delay: 0s;
     }
 
-    .big-box.hover .small-box:nth-child(2) {
+    .big-box:hover .small-box:nth-child(2) {
       transform: translateX(-250px);
       transition-delay: 0.2s;
     }
 
-    .big-box.hover .small-box:nth-child(3) {
-      transform: translateX(-450px);
+    .big-box:hover .small-box:nth-child(3) {
+      transform: translateX(-400px);
       transition-delay: 0.4s;
     }
   </style>
@@ -56,19 +56,10 @@
     <div class="small-box"></div>
     <div class="small-box"></div>
     <div class="small-box"></div>
+    
   </div>
 
-  <script>
-    const bigBox = document.getElementById('bigBox');
-
-    bigBox.addEventListener('mouseenter', () => {
-      bigBox.classList.add('hover');
-    });
-
-    bigBox.addEventListener('mouseleave', () => {
-      bigBox.classList.remove('hover');
-    });
-  </script>
+ 
 
 </body>
 </html>
